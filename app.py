@@ -21,18 +21,13 @@ with st.form("student_form"):
         study_hours = st.slider("📚 Study Hours per Week", 0, 60, 20)
         attendance = st.slider("🎯 Attendance Percentage", 0, 100, 85)
         prev_score = st.slider("📊 Previous Semester Score", 0, 100, 70)
-        parental_edu = st.selectbox("👨‍🏫 Parental Education Level", ["Low", "Medium", "High"])
-        internet_access = st.selectbox("🌐 Internet Access", ["No", "Yes"])
-        tutoring = st.selectbox("📘 Attends Tutoring Classes?", ["No", "Yes"])
-        sports = st.selectbox("⚽ Sports Activity", ["No", "Yes"])
+        
 
     with col2:
-        extracurricular = st.selectbox("🎭 Extracurricular Activities", ["No", "Yes"])
-        school_type = st.selectbox("🏫 School Type", ["Public", "Private"])
-        sleep_hours = st.slider("💤 Average Sleep Hours", 3, 10, 7)
-        travel_time = st.slider("🚌 Travel Time to School (mins)", 0, 120, 30)
+      
+        
         test_anxiety = st.slider("😰 Test Anxiety Level (1-10)", 1, 10, 5)
-        motivation = st.slider("🔥 Motivation Level (1-10)", 1, 10, 7)
+        teacher_feedback=st.slider("  Teacher Feedback (1-10)",1,10)
         library_usage = st.slider("📖 Library Usage per Week (hours)", 0, 20, 5)
 
     submitted = st.form_submit_button("🔍 Predict Performance")
@@ -40,24 +35,15 @@ with st.form("student_form"):
 # Prediction Logic
 if submitted:
     # Convert categorical fields to numeric for the model
-    parental_edu_map = {"Low": 0, "Medium": 1, "High": 2}
-    yes_no_map = {"No": 0, "Yes": 1}
-    school_type_map = {"Public": 0, "Private": 1}
+    
 
     input_data = {
         "Study_Hours_per_Week": study_hours,
         "Attendance_Percentage": attendance,
         "Previous_Sem_Score": prev_score,
-        "Parental_Education": parental_edu_map[parental_edu],
-        "Internet_Access": yes_no_map[internet_access],
-        "Tutoring_Classes": yes_no_map[tutoring],
-        "Sports_Activity": yes_no_map[sports],
-        "Extra_Curricular": yes_no_map[extracurricular],
-        "School_Type": school_type_map[school_type],
-        "Sleep_Hours": sleep_hours,
-        "Travel_Time": travel_time,
+        
         "Test_Anxiety_Level": test_anxiety,
-        "Motivation_Level": motivation,
+        "Teacher_Feedback":teacher_feedback,
         "Library_Usage_per_Week": library_usage
     }
 
@@ -82,4 +68,4 @@ if submitted:
         st.error("📉 Low Performance – Needs Attention!")
 
 st.markdown("---")
-st.caption("Developed by Atchaya • AI&DS Student Analyzer 💡")
+st.caption("Developed by Atchaya •  Student Analyzer 💡")
