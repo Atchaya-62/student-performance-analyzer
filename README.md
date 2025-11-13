@@ -64,7 +64,7 @@ student-performance-analyzer/
 
 USING THE APP- GUIDE
 Step 1: Input student information
-<img width="996" height="820" alt="image" src="https://github.com/user-attachments/assets/93adab4c-d823-485a-a081-89b6520d5bf1" />
+<img width="1014" height="599" alt="image" src="https://github.com/user-attachments/assets/64ad6aca-60a1-47ed-9e89-06715bd66ee2" />
 
 Step 2: Click “Predict”
 <img width="945" height="409" alt="image" src="https://github.com/user-attachments/assets/7a1188bd-410f-49ba-b3f6-93c05aa2769b" />
