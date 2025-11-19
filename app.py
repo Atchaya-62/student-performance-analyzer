@@ -57,6 +57,12 @@ if submitted:
     # Predict
     prediction = model.predict(selected_input)[0]
 
+    print("Input Features:")
+    for col, val in input_df.iloc[0].items():
+        print(f"{col:<30} : {val}")
+
+    print(f"\nPredicted Final Score: {prediction:.2f}")
+
     st.success(f"📈 Predicted Final Score: **{prediction:.2f}**")
 
     if prediction >= 85:
